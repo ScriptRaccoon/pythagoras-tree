@@ -1,0 +1,92 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+}
+
+canvas {
+    background-color: #040407;
+}
+
+#controls {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    height: 80px;
+}
+
+#controls:not(:hover) {
+    animation: disappear 500ms 2s forwards;
+}
+#controls:hover {
+    animation: appear 500ms forwards;
+}
+
+@keyframes disappear {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#controlContent {
+    height: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input[type="button"] {
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+    padding: 5px 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+input[type="button"]:hover {
+    background-color: #222;
+}
+
+input[type="range"] {
+    width: 120px;
+    cursor: pointer;
+    transform: translateY(5px);
+}
+
+#iterationSpan,
+#minAngleSpan,
+#maxAngleSpan {
+    display: inline-block;
+    width: 3ch;
+    text-align: center;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pythagoras Tree</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <canvas id="canvas" width="1000" height="600"></canvas> 
+    </main>
+    <section id="controls">
+        <div id="controlContent">
+            <input id="drawBtn" type="button" value="Draw">
+            <div>
+                <span><span id="iterationSpan"></span> Iterations</span>
+                <input type="range" min="1" max="20" value="10" id="iterationInput">
+            </div>
+            <div>
+                <span>Minimum angle <span id="minAngleSpan"></span></span>
+                <input type="range" min="1" max="45" value="30" class="angleInput" id="minAngleInput">
+            </div>            
+            <div>
+                <span>Maximum angle <span id="maxAngleSpan"></span></span>
+                <input type="range" min="1" max="45" value="45" class="angleInput" id="maxAngleInput">
+            </div> 
+        </div>      
+    </section> 
+
+    <script src="main.js"></script>
+</body>
+</html>
